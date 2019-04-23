@@ -86,8 +86,10 @@ import string                         # 创建随机字符串要用到。
 
 # 0. 版权页信息
 
-strAppVersion = "V 1.0.2"
+strAppVersion = "V 1.0.3"
+strAppHomepage = "https://github.com/evering7/StandardizePicture"
 print("制作考试用的标准证件照 by Python 版本号：" + strAppVersion)
+print("项目主页：" + strAppHomepage)
 print("作者：福建莆田 李剑飞 13799001059@139.com")
 print("代码的最后修改日期：2019.4.20")
 time.sleep(1)  # 停留一会儿。
@@ -115,7 +117,7 @@ time.sleep(1)  # 停留一会儿。
                     
 # args = parserArgs.parse_args()
 
-print(sys.argv[1:])
+# print(sys.argv[1:])
 ## strTemp = input()
 
 
@@ -140,7 +142,7 @@ if len(sourceFiles) == 0:
     print(time.strftime('%Y%m%d_%H%M%S',time.localtime()) + " 行号 " + str(sys._getframe().f_lineno) + \
        " 快捷方式的存放路径 = " + strShortCut_Location)
     
-    strTemp = input("请按回车键继续：")
+    # strTemp = input("请按回车键继续：")
     shortcut = shell.CreateShortCut(strShortCut_Location)
     shortcut.Targetpath = strStdPic_CmdFullPath
     
@@ -157,7 +159,7 @@ if len(sourceFiles) == 0:
     shortcut.IconLocation = icon_Path
     shortcut.save()
     
-    strTemp = input("完成发送到的快捷方式设置，请按回车键退出：")
+    # strTemp = input("完成发送到的快捷方式设置，请按回车键退出：")
     
     
     quit()
